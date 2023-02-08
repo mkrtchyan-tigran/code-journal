@@ -22,7 +22,32 @@
   </header>
   <main class="container">
     <div data-view="entry-form"></div>
-    <div data-view="entries" class="hidden"></div>
+    <div data-view="entries" class="hidden">
+      <form class="form">
+        <div class="div-lable">
+          <label for="title">Text</label>
+        </div>
+        <div class="div-input">
+          <input type="text" name="title" id="title">
+        </div>
+        <div class="div-lable">
+          <label for="url-photo">Photo URL</label>
+        </div>
+        <div class="div-input">
+          <input type="url" name="url-photo" id="url-photo">
+        </div>
+        <div class="div-lable">
+          <label for="notes">Notes</label>
+        </div>
+        <div class="div-input">
+          <textarea name="notes" id="notes"></textarea>
+        </div>
+        <div class="div-input">
+          <input type="submit" value="Save">
+        </div>
+      </form>
+
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
