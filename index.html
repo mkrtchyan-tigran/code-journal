@@ -18,10 +18,53 @@
 <body>
   <header>
     <div class="container">
+      <h2 class="header-journal">Code Journal</h2>
     </div>
   </header>
   <main class="container">
-    <div data-view="entry-form"></div>
+    <div data-view="entry-form">
+      <form class="form">
+        <h1 class="new-entry">New Entry</h1>
+        <div class="row">
+          <div class="column-half">
+            <img class="placeholder-image" src="images/placeholder-image-square.jpg" alt="image">
+          </div>
+          <div class="column-half">
+            <div class="div-label-input">
+              <div class="div-label">
+                <label for="title">Title</label>
+              </div>
+              <div class="div-input title-input">
+                <input type="text" name="title" id="title-input" required>
+              </div>
+            </div>
+            <div class="div-label-input">
+              <div class="div-label">
+                <label for="urlPhoto">Photo URL</label>
+              </div>
+              <div class="div-input">
+                <input type="url" name="url-photo" id="urlPhoto" class="url-photo-input" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column-full">
+            <div class="div-label-input">
+              <div class="div-label">
+                <label for="notes">Notes</label>
+              </div>
+              <div class="div-input notes-input">
+                <textarea name="notes" id="notes-input" required></textarea>
+              </div>
+            </div>
+            <div class="div-label-input div-submit">
+              <input type="submit" value="save" class="submit-button">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
     <div data-view="entries" class="hidden"></div>
   </main>
   <script src="js/data.js"></script>
