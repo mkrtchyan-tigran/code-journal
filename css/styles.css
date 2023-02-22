@@ -19,7 +19,11 @@ header {
 
 .nav-tab {
   padding-bottom: 0;
-  margin: 0 1rem 0 0;
+  margin-right: 1rem;
+}
+
+main {
+  margin: 0;
 }
 
 h3 {
@@ -27,9 +31,19 @@ h3 {
   margin: auto 0;
 }
 
-.entries-header {
+.entries-header,
+.title-header {
   display: flex;
   justify-content: space-between;
+}
+
+.new-entry-button {
+  height: 100%;
+  margin: auto 0;
+}
+
+.title-header {
+  margin-top: 0.5rem;
 }
 
 img {
@@ -38,11 +52,20 @@ img {
   height: 33vh;
 }
 
+.fa-solid {
+  color: #562b80;
+  margin: auto 0;
+}
+
 label {
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
   font-weight: 700;
+}
+
+label.column-full {
+  margin: 0;
 }
 
 input,
@@ -54,13 +77,9 @@ textarea {
   margin-top: 0.5rem;
 }
 
-.submit,
-.new-entry-button {
-  margin: 1.5rem 0;
-}
-
 .submit {
   text-align: right;
+  margin: 1.5rem 0;
 }
 
 button,
@@ -73,17 +92,9 @@ button,
   font-size: 1rem;
 }
 
-ul {
-  padding: 0;
-}
-
 li {
   list-style: none;
   padding-bottom: 0.5rem;
-}
-
-h4 {
-  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -102,5 +113,9 @@ h4 {
 
   .entries-header {
     padding-right: 0.75rem;
+  }
+
+  .title-header {
+    margin-top: 0;
   }
 }
