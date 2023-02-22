@@ -1,18 +1,14 @@
 /* exported data */
-function beforeUnload(event) {
-  var dataJSON = JSON.stringify(data);
-  localStorage.setItem('data-local-storage', dataJSON);
-}
 var data = {
   view: 'entry-form',
   entries: [],
   editing: null,
   nextEntryId: 1
 };
+window.addEventListener('beforeunload', () => {
+  localStorage.setItem('codeJournalEntries', JSON.stringify(data));
+});
 
-var FirstDataJSON = localStorage.getItem('data-local-storage');
-if (FirstDataJSON !== null) {
-  data = JSON.parse(FirstDataJSON);
+if (localStorage.getItem('codeJournalEntries')) {
+  data = JSON.parse(localStorage.getItem('codeJournalEntries'));
 }
-
-window.addEventListener('beforeunload', beforeUnload);
