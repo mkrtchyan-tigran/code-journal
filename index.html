@@ -17,55 +17,52 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <h2 class="header-journal">Code Journal</h2>
-    </div>
+    <nav class="container">
+      <ul class="nav-bar">
+        <li class="nav-tab">
+          <h3>Code Journal</h3>
+        </li>
+        <li class="nav-tab"><a data-view="entries">Entries</a></li>
+      </ul>
+    </nav>
   </header>
   <main class="container">
-    <div data-view="entry-form">
-      <form class="form">
-        <h1 class="new-entry">New Entry</h1>
-        <div class="row">
-          <div class="column-half">
-            <img class="placeholder-image" src="images/placeholder-image-square.jpg" alt="image">
-          </div>
-          <div class="column-half">
-            <div class="div-label-input">
-              <div class="div-label">
-                <label for="title">Title</label>
-              </div>
-              <div class="div-input title-input">
-                <input type="text" name="title" id="title-input" required>
-              </div>
-            </div>
-            <div class="div-label-input">
-              <div class="div-label">
-                <label for="urlPhoto">Photo URL</label>
-              </div>
-              <div class="div-input">
-                <input type="url" name="url-photo" id="urlPhoto" class="url-photo-input" required>
-              </div>
-            </div>
-          </div>
+    <div class="" data-view="entry-form">
+      <h1>New Entry</h1>
+      <form class="row">
+        <div class="column-half">
+          <img src="images/placeholder-image-square.jpg" alt="User's inputted image">
         </div>
-        <div class="row">
-          <div class="column-full">
-            <div class="div-label-input">
-              <div class="div-label">
-                <label for="notes">Notes</label>
-              </div>
-              <div class="div-input notes-input">
-                <textarea name="notes" id="notes-input" required></textarea>
-              </div>
-            </div>
-            <div class="div-label-input div-submit">
-              <input type="submit" value="save" class="submit-button">
-            </div>
-          </div>
+        <div class="column-half">
+          <label for="title">
+            Title
+            <input required type="text" name="title" id="title">
+          </label>
+          <label for="img-src">
+            Photo URL
+            <input required type="text" name="img-src" id="img-src">
+          </label>
+        </div>
+        <label for="img-notes" class="column-full">
+          Notes
+          <textarea required cols="40" rows="6" name="img-notes" id="img-notes"></textarea>
+        </label>
+        <div class="column-full submit">
+          <button type="submit">SAVE</button>
         </div>
       </form>
     </div>
-    <div data-view="entries" class="hidden"></div>
+    <div data-view="entries" class="hidden">
+      <div class="entries-header">
+        <h1>Entries</h1>
+        <a class="new-entry-button" data-view="entry-form">NEW</a>
+      </div>
+      <div class="row column-full" id="no-entries">
+        <p>No entries have been recorded.</p>
+      </div>
+      <ul class="entries-list">
+      </ul>
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
