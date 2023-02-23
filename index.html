@@ -5,16 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Journal</title>
   <link rel="icon" href="images/favicon.ico">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <header>
     <nav class="container">
@@ -28,10 +26,11 @@
   </header>
   <main class="container">
     <div class="" data-view="entry-form">
-      <h1>New Entry</h1>
+      <h1 id="entry-form-header">New Entry</h1>
       <form class="row">
         <div class="column-half">
           <img src="images/placeholder-image-square.jpg" alt="User's inputted image">
+          <h1>New Entry</h1>
         </div>
         <div class="column-half">
           <label for="title">
@@ -52,12 +51,12 @@
         </div>
       </form>
     </div>
-    <div data-view="entries" class="hidden">
+    <div data-view="entries" class="">
       <div class="entries-header">
         <h1>Entries</h1>
         <a class="new-entry-button" data-view="entry-form">NEW</a>
       </div>
-      <div class="row column-full" id="no-entries">
+      <div class="row column-full center-align" id="no-entries">
         <p>No entries have been recorded.</p>
       </div>
       <ul class="entries-list">
